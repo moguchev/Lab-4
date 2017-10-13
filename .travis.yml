@@ -30,4 +30,4 @@ script:
 
   - cmake .. && make
 
-#  - ./executable
+
