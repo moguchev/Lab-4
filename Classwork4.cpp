@@ -21,7 +21,6 @@ std::vector<T> generate_random_vector(std::size_t num, T min = -10, T max = 10)
 
 int main()
 {
-    // 1
     std::cout << " Enter the size of the array" << std::endl;
     int size_array = 0;
     std::cin >> size_array;
@@ -53,7 +52,7 @@ int main()
         v[i] = v[v.size() - i - 1];
         v[v.size() - i - 1] = t;
     }
-     */
+    */
     std::cout << " sort Array:" << std::endl;
     for (int i = 0; i < v.size(); ++i)
         std::cout << v[i] << ' ';
