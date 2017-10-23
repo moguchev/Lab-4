@@ -1,4 +1,4 @@
-#include <cmath>
+ #include <cmath>
 #include <iomanip>
 #include <iostream>
 #include <random>
@@ -18,7 +18,7 @@ void sort_array(int *pM, int size)
         j = i;
         for (int k = 0; k < size; ++k)
         {
-            if (pM[j] < pM[k]) // < в порядке возрастания, > в порядке убывания
+            if (pM[j] < pM[k]) // <-в порядке возрастания,>-в порядке убывания
             {
                 j = k;
             }
@@ -86,7 +86,7 @@ void reverse_array(int *pM, int size)
     std::cout << std::endl;
 }
 int main()
-{ 
+{
     // Задание динамического массива c клавиатуры
     std::cout << " Enter size of new array " << std::endl;
     int size = 0;
