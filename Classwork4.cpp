@@ -18,7 +18,7 @@ void sort_array(int *pM, int size)
         j = i;
         for (int k = 0; k < size; ++k)
         {
-            if (pM[j] < pM[k]) // <-в порядке возрастания,>-в порядке убывания
+            if (pM[j] < pM[k])  // < в порядке возрастания, > в порядке убывания
             {
                 j = k;
             }
