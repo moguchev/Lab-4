@@ -16,7 +16,7 @@ matrix:
 
       compiler: g++-5
 
-      env: COMPILER=g++ -std=c++11
+      env: COMPILER=g++ -std=c++14
 
 
 
