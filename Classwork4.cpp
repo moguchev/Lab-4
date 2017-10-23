@@ -1,4 +1,5 @@
- #include <cmath>
+#include <cmath>
+#include <ctime>
 #include <iomanip>
 #include <iostream>
 #include <random>
@@ -6,7 +7,7 @@
 // Функция вывода массива
 void print_array(int *pM, int size)
 {
-    for(int i = 0; i < size; ++i)
+    for (int i = 0; i < size; ++i)
         std::cout << pM[i] << ' ';
     std::cout << std::endl;
 }
@@ -18,7 +19,7 @@ void sort_array(int *pM, int size)
         j = i;
         for (int k = 0; k < size; ++k)
         {
-            if (pM[j] < pM[k]) // <-в порядке возрастания,>-в порядке убывания
+            if (pM[j] < pM[k]) // <-в порядке возрастания, >-в порядке убывания
             {
                 j = k;
             }
@@ -86,7 +87,7 @@ void reverse_array(int *pM, int size)
     std::cout << std::endl;
 }
 int main()
-{
+{ 
     // Задание динамического массива c клавиатуры
     std::cout << " Enter size of new array " << std::endl;
     int size = 0;
@@ -112,5 +113,4 @@ int main()
     print_array(array1, size1);
     sort_array_puz_mod(array1, size1);
     reverse_array(array1, size1);
-    system("pause");
 }
