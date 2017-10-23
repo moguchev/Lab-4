@@ -1,6 +1,7 @@
 #include <cmath>
 #include <iomanip>
 #include <iostream>
+#include <stdlib.h>
 #include <random>
 
 // Функция вывода массива
