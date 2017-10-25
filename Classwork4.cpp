@@ -18,6 +18,7 @@ void sort_array(int *pM, int size)
     {
         j = i;
         for (int k = 0; k < size; ++k)
+
         {
             if (pM[j] < pM[k])  // < в порядке возрастания, > в порядке убывания
             {
@@ -32,6 +33,28 @@ void sort_array(int *pM, int size)
         std::cout << pM[i] << ' ';
     std::cout << std::endl;
 }
+// Сортировка вектора методом пузырька улучшенная
+void sort_vector_puz_mod(std::vector<int> & vec)
+{
+    for (int i = 0; i < vec.size() - 1; ++i)
+    {
+        bool flag = true;
+        for (int j = 0; j < vec.size() - i - 1; ++j)
+        {
+            if (vec[j] > vec[j + 1])
+            {
+                int temp = vec[j];
+                vec[j] = vec[j + 1];
+                vec[j + 1] = temp;
+                flag = false;
+            }
+        }
+        if (flag) break;
+    }
+    for (int i = 0; i < vec.size(); ++i)
+        std::cout << vec[i] << ' ';
+    std::cout << std::endl;
+} 
 // Сортировка массива методом пузырька
 void sort_array_puz(int *pM, int size)
 {
@@ -86,6 +109,19 @@ void reverse_array(int *pM, int size)
         std::cout << pM[i] << ' ';
     std::cout << std::endl;
 }
+// Зеркальное отображение вектора
+void reverse_vector(std::vector<int> & vec)
+{
+    for (int i = 0, tpm = 0; i < vec.size() / 2; ++i)
+    {
+        tpm = vec[i];
+        vec[i] = vec[vec.size() - i - 1];
+        vec[vec.size() - i - 1] = tpm;
+    }
+    for (int i = 0; i < vec.size(); ++i)
+        std::cout << vec[i] << ' ';
+    std::cout << std::endl;
+}
 int main()
 {
     // Задание динамического массива c клавиатуры
@@ -113,5 +149,11 @@ int main()
     print_array(array1, size1);
     sort_array_puz_mod(array1, size1);
     reverse_array(array1, size1);
+    // Задание массива через вектор и его вывод
+    std::vector<int> v = generate_random_vector<int>(10, -100, 50);
+    std::cout << " New Array:" << std::endl;
+    print_vector(v);
+    sort_vector_puz_mod(v);
+    reverse_vector(v);
     system("pause");
 }
