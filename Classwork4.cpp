@@ -76,7 +76,7 @@ void sort_vector_puz_mod(std::vector<int> & vec)
     for (int i = 0; i < vec.size(); ++i)
         std::cout << vec[i] << ' ';
     std::cout << std::endl;
-} 
+}
 // Сортировка массива методом пузырька
 void sort_array_puz(int *pM, int size)
 {
