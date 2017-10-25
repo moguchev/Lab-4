@@ -5,6 +5,19 @@
 #include <stdlib.h>
 #include <random>
 
+template<class T>
+std::vector<T> generate_random_vector(std::size_t num, T min = -10, T max = 10)
+{
+    std::random_device rd;
+    std::mt19937 e2(rd());
+    std::uniform_real_distribution<> dist(min, max);
+
+    auto lambda = [&e2, &dist]() -> T { return dist(e2); };
+
+    std::vector<T> result(num);
+    std::generate_n(result.begin(), num, lambda);
+    return result;
+}
 // Функция вывода массива
 void print_array(int *pM, int size)
 {
@@ -29,8 +42,7 @@ void sort_array(int *pM, int size)
         j = i;
         for (int k = 0; k < size; ++k)
 
-        {
-            if (pM[j] < pM[k])  // < в порядке возрастания, > в порядке убывания
+        {            if (pM[j] < pM[k])  // < в порядке возрастания, > в порядке убывания
             {
                 j = k;
             }
