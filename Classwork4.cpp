@@ -174,7 +174,7 @@ int main()
     sort_array_puz_mod(array1, size1);
     reverse_array(array1, size1);
     // Задание массива через вектор и его вывод
-    std::vector<int> v = generate_random_vector<int>(10, -100, 50);
+    std::vector<int> v = generate_random_vector<int>(10, -10, 50);
     std::cout << " New Array:" << std::endl;
     print_vector(v);
     sort_vector_puz_mod(v);
