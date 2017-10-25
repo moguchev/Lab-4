@@ -15,7 +15,7 @@ std::vector<T> generate_random_vector(std::size_t num, T min = -10, T max = 10)
     auto lambda = [&e2, &dist]() -> T { return dist(e2); };
 
     std::vector<T> result(num);
-    std::generate_n(result.begin(), num, lambda);
+    generate_n(result.begin(), num, lambda);
     return result;
 }
 // Функция вывода массива
