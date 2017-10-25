@@ -1,9 +1,11 @@
-
+#include <algorithm>
 #include <cmath>
 #include <iomanip>
 #include <iostream>
 #include <stdlib.h>
+#include <string>
 #include <random>
+#include <vector>
 
 template<class T>
 std::vector<T> generate_random_vector(std::size_t num, T min = -10, T max = 10)
@@ -15,7 +17,7 @@ std::vector<T> generate_random_vector(std::size_t num, T min = -10, T max = 10)
     auto lambda = [&e2, &dist]() -> T { return dist(e2); };
 
     std::vector<T> result(num);
-    generate_n(result.begin(), num, lambda);
+    std::generate_n(result.begin(), num, lambda);
     return result;
 }
 // Функция вывода массива
