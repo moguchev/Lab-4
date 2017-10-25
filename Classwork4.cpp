@@ -1,3 +1,4 @@
+
 #include <cmath>
 #include <iomanip>
 #include <iostream>
@@ -9,6 +10,15 @@ void print_array(int *pM, int size)
 {
     for (int i = 0; i < size; ++i)
         std::cout << pM[i] << ' ';
+    std::cout << std::endl;
+}
+// Функция вывода вектора
+void print_vector(const std::vector<int> & vec)
+{
+    for (std::size_t i = 0; i < vec.size(); ++i)
+    {
+        std::cout << vec[i] << " ";
+    }
     std::cout << std::endl;
 }
 // Сортировка массива (долгая)
