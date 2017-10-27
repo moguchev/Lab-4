@@ -28,7 +28,7 @@ void print_array(int *pM, int size)
     std::cout << std::endl;
 }
 // Функция вывода вектора
-void print_vector(const std::vector<int> & vec)
+void print_vector(const std::vector<int>& vec)
 {
     for (std::size_t i = 0; i < vec.size(); ++i)
     {
@@ -55,7 +55,7 @@ void sort_array(int *pM, int size)
     }
 }
 // Сортировка вектора методом пузырька улучшенная
-void sort_vector_puz_mod(std::vector<int> & vec)
+void sort_vector_puz_mod(std::vector<int>& vec)
 {
     for (int i = 0; i < vec.size() - 1; ++i)
     {
