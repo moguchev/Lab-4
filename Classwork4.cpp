@@ -53,9 +53,6 @@ void sort_array(int *pM, int size)
             pM[j] = temp;
         }
     }
-    for (int i = 0; i < size; ++i)
-        std::cout << pM[i] << ' ';
-    std::cout << std::endl;
 }
 // Сортировка вектора методом пузырька улучшенная
 void sort_vector_puz_mod(std::vector<int> & vec)
@@ -75,9 +72,6 @@ void sort_vector_puz_mod(std::vector<int> & vec)
         }
         if (flag) break;
     }
-    for (int i = 0; i < vec.size(); ++i)
-        std::cout << vec[i] << ' ';
-    std::cout << std::endl;
 }
 // Сортировка массива методом пузырька
 void sort_array_puz(int *pM, int size)
@@ -94,9 +88,6 @@ void sort_array_puz(int *pM, int size)
             }
         }
     }
-    for (int i = 0; i < size; ++i)
-        std::cout << pM[i] << ' ';
-    std::cout << std::endl;
 }
 // Сортировка массива методом пузырька улучшенная
 void sort_array_puz_mod(int *pM, int size)
@@ -116,9 +107,6 @@ void sort_array_puz_mod(int *pM, int size)
         }
         if (flag) break;
     }
-    for (int i = 0; i < size; ++i)
-        std::cout << pM[i] << ' ';
-    std::cout << std::endl;
 }
 // Зеркальное отображение массива
 void reverse_array(int *pM, int size)
@@ -129,9 +117,6 @@ void reverse_array(int *pM, int size)
         pM[i] = pM[size - i - 1];
         pM[size - i - 1] = tpm;
     }
-    for (int i = 0; i < size; ++i)
-        std::cout << pM[i] << ' ';
-    std::cout << std::endl;
 }
 // Зеркальное отображение вектора
 void reverse_vector(std::vector<int> & vec)
@@ -142,9 +127,6 @@ void reverse_vector(std::vector<int> & vec)
         vec[i] = vec[vec.size() - i - 1];
         vec[vec.size() - i - 1] = tpm;
     }
-    for (int i = 0; i < vec.size(); ++i)
-        std::cout << vec[i] << ' ';
-    std::cout << std::endl;
 }
 int main()
 {
@@ -159,7 +141,9 @@ int main()
     }
     print_array(array, size);
     sort_array_puz(array, size);
+    print_array(array, size);
     reverse_array(array, size);
+    print_array(array, size);
     // Задание динамического массива случайными значениями
     srand(time(0));
     std::cout << " Enter size of new array " << std::endl;
@@ -172,12 +156,16 @@ int main()
     }
     print_array(array1, size1);
     sort_array_puz_mod(array1, size1);
+    print_array(array1, size1);
     reverse_array(array1, size1);
+    print_array(array1, size1);
     // Задание массива через вектор и его вывод
     std::vector<int> v = generate_random_vector<int>(10, -100, 50);
     std::cout << " New Array:" << std::endl;
     print_vector(v);
     sort_vector_puz_mod(v);
+    print_vector(v);
     reverse_vector(v);
+    print_vector(v);
     system("pause");
 }
